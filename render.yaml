@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vpn-shop-kg
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GEOBLOCK_ENABLED
+        value: 'true'
+      - key: MOBILE_ONLY
+        value: 'true'
